@@ -1,0 +1,55 @@
+#navi {
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 5%;
+	margin-bottom: 10px;
+	background-color: rgba(206,206,206,.8);
+	border-radius: 25px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
+background-color:darkgrey;
+color:white;
+}
+
+.nav-pills>li>a {
+	color:white;
+}
+
+.nav-pills>li>a:hover {
+	color:#337ab7;
+}
+
+#navi #pills {
+	margin-left: 3%;
+}
+
+#con {
+	background-color: rgba(206,206,206,.8);
+	margin-left: 20%;
+	margin-right: 20%;
+/*	margin-top: 5%;*/
+	margin-bottom: 5%;
+	border-radius: 25px;
+}
+
+#title {
+	color:#ffffff;
+	font-family: 'Luckiest Guy', cursive;
+	text-shadow: 2px 2px black;
+}
+
+#myCarousel {
+	position:relative;
+	padding-top: 15px;
+	width: 75%;
+	height: 50%;
+	margin-left: 12%;
+	margin-right: 12%;
+	border-radius: 25px;
+}
+
+#myBack {
+	background-color: #337ab7 ;
+	background-position: absolute;
+}
