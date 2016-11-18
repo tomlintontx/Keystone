@@ -1,6 +1,6 @@
 #navi {
-	margin-left: 20%;
-	margin-right: 20%;
+	margin-left: 15%;
+	margin-right: 15%;
 	margin-top: 5%;
 	margin-bottom: 10px;
 	background-color: rgba(206,206,206,.8);
@@ -26,11 +26,11 @@ color:white;
 
 #con {
 	background-color: rgba(206,206,206,.8);
-	margin-left: 20%;
-	margin-right: 20%;
-/*	margin-top: 5%;*/
+	margin-left: 15%;
+	margin-right: 15%;
 	margin-bottom: 5%;
 	border-radius: 25px;
+	min-height: 800px;
 }
 
 #title {
@@ -39,17 +39,24 @@ color:white;
 	text-shadow: 2px 2px black;
 }
 
-#myCarousel {
-	position:relative;
-	padding-top: 15px;
-	width: 75%;
-	height: 50%;
-	margin-left: 12%;
-	margin-right: 12%;
-	border-radius: 25px;
-}
-
 #myBack {
 	background-color: #337ab7 ;
 	background-position: absolute;
+}
+
+#carousel-example-generic {
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 350px;
+	min-height: 150px;
+/*	border-radius: 25px;*/
+	border:solid;
+	border-color: black;
+}
+
+#news {
+	max-width: 100%;
+	border:solid;
+	border-color: black;
+	border-radius: 15px;
 }
