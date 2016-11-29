@@ -60,3 +60,20 @@ color:white;
 	border-color: black;
 	border-radius: 15px;
 }
+
+.thumbnail {
+	background:transparent;
+	border:none;
+}
+
+.thumbnail>img {
+	box-shadow: 4px 4px 2px #888888;
+}
+
+#tttest {
+	text-align:center;
+}
+
+#thmb {
+	padding-top: 25px;
+}
