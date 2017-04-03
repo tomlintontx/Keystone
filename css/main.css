@@ -1,0 +1,142 @@
+#navi {
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 5%;
+	margin-bottom: 10px;
+	background-color: rgb(167,167,167);
+	border-radius: 25px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
+background-color:rgb(120,120,120);
+color:white;
+}
+
+.tb  {
+	max-width:300px;
+	max-height:185px;
+	overflow:hidden;
+}
+
+.nav-pills>li>a {
+	color:white;
+}
+
+.nav-pills>li>a:hover {
+	color:#05386b;
+}
+
+#navi #pills {
+	margin-left: 3%;
+}
+
+#social {
+	padding-right: 25px;
+	padding-top: 3px;
+}
+
+#con {
+	background-color: rgb(167,167,167);
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-bottom: 5%;
+	border-radius: 25px;
+/* 	min-height: 800px; */
+}
+
+#title {
+	color:#ffffff;
+	font-family: 'Luckiest Guy', cursive;
+	text-shadow: 2px 2px black;
+}
+
+#myBack {
+	background-color: #05386b; /*#337ab7;*/
+	background-image: url("11.png");
+	background-position: top right;
+	background-size:15%;
+	background-repeat: no-repeat;
+}
+
+#carousel-example-generic {
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 350px;
+	min-height: 150px;
+/*	border-radius: 25px;*/
+	border:solid;
+	border-color: black;
+}
+
+#news {
+	max-width: 100%;
+	border:solid;
+	border-color: black;
+	border-radius: 15px;
+}
+
+.thumbnail {
+	background:transparent;	
+	border:none;
+	position:relative;
+}
+
+#ti {
+	box-shadow: 4px 4px 4px #888888;
+/* 	max-width:275px;
+	max-height:200px;
+	min-height:170px; */
+	height:170px;
+	width:280px;
+	overflow:hidden;
+}
+
+#tttest {
+	text-align:center;
+}
+
+#thmb {
+	padding-top: 25px;
+}
+
+#mission {
+	padding-bottom: 25px;
+}
+
+#foot {
+	border-right:solid;
+	border-color:black;
+	border-width:1px;
+	height:200px;
+        padding-top:43px;
+} 
+
+#footlogo {
+	height: 200px;
+	width: auto;
+	margin: 0 auto;
+}
+
+#story {
+	padding-bottom: 25px;
+}
+
+#me {
+	padding-bottom:25px;
+}
+
+#aboutImg {
+	size:50%;
+}
+
+#footer {
+	padding-top:25px;
+}
+
+textarea {
+	min-height:200px;
+}
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}

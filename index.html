@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<HTML ng-app="tabs">
+	<head>
+	<meta charset="utf-8">
+<script type="text/javascript">
+  if (screen.width <= 800) {
+    window.location = "http://m.keystonegymnastics.com";
+  }
+</script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="\css\bootstrap-social.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="\css\main.css">
+	</head>
+	
+	<body id="myBack">
+		<section ng-controller="PanelController as panel">
+			<nav>
+				<ul class="nav nav-pills" id="navi">
+					<li ng-class="{ active:panel.isSelected(1) }" id="pills">
+						<a href ng-click="panel.selectTab(1)">Home</a>
+					</li>
+	  				<li ng-class="{ active:panel.isSelected(2) }">
+	  					<a href ng-click="panel.selectTab(2)">About</a>
+	  				</li>
+	  				<li ng-class="{ active:panel.isSelected(3) }">
+	  					<a href ng-click="panel.selectTab(3)">Curriculum</a>
+	  				</li> 
+	  				<li ng-class="{ active:panel.isSelected(4) }">
+	  					<a href ng-click="panel.selectTab(4)">Calendar</a>
+	  				</li>
+					<li ng-class="{ active:panel.isSelected(5) }">
+	  					<a href ng-click="panel.selectTab(5)">Contact</a>
+	  				</li>
+					<li class="pull-right" id="social">
+						<a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/keystonegymnastics" target="_blank">
+							<span class="fa fa-facebook"></span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="container-fluid" id="con">		
+				<div class="row">
+					<div class="col-md-9" id="title">
+						<h1>Keystone Gymnastics</h1>
+					</div>
+				</div>
+
+				    <!-- Home Page
+	    ================================================== -->
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" ng-show="panel.isSelected(1)">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+				  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				      <img src="\images\Slide1.jpg" alt="" id="i1">
+				      <div class="carousel-caption">
+				        ...
+				      </div>
+				    </div>
+				    <div class="item">
+				      <img src="\images\Slide2.jpg" alt="" id="i2">
+				      <div class="carousel-caption">
+				        ...
+				      </div>
+				    </div>
+				    <div class="item">
+				      <img src="\images\Slide3.jpg" alt="">
+				      <div class="carousel-caption">
+				        ...
+				      </div>
+                                    </div>
+                                    <div class="item">
+				      <img src="\images\Slide4.jpg" alt="">
+				      <div class="carousel-caption">
+				        ...
+				      </div>
+				    </div>
+				    
+				  </div>
+
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+
+				<div class="container-fluid" id="thmb" ng-show="panel.isSelected(1)">
+					<div class="row">
+						<div class="col-lg-12" id="mission">
+							<h1>Welcome to Keystone Gymnastics!</h1>
+							<p>
+								Here at Keystone Gymnastics we build strong, happy, kids! We offer recreational gymnastic classes for kids from ages 2 to 12. 
+								This is where you can enter more text about what you offer. and what keystone gymnastics is all about.
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<img src="http://www.dcgymnastics.net/images/pics/scroller/index7a.JPG" class="img-responsive" id="ti" alt="...">
+								<div class="caption">
+									<h3 id="tttest">Curriculum/Products</h3>
+									<p>Let us watch your kids this winter! We have themed camps and all kinds of stuff for your little brats to do!</p>
+								</div>
+							</div>	
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<img src="http://westlothiangymnastics.co.uk/wp-content/uploads/2014/05/slide0041.jpg" class="img-responsive" id="ti" alt="...">
+								<div class="caption">
+									<h3 id="tttest">Tumble Truck</h3>
+									<p>Let us watch your kids this winter! We have themed camps and all kinds of stuff for your little brats to do!</p>
+								</div>
+							</div>	
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<img src="http://www.dcgymnastics.net/images/pics/scroller/index7a.JPG" class="img-responsive" id="ti" alt="...">
+								<div class="caption">
+									<h3 id="tttest">Parties</h3>
+									<p>Let us watch your kids this winter! We have themed camps and all kinds of stuff for your little brats to do!</p>
+								</div>
+							</div>	
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<img src="http://www.dcgymnastics.net/images/pics/scroller/index7a.JPG" class="img-responsive" id="ti" alt="...">
+								<div class="caption">
+									<h3 id="tttest">Camps</h3>
+									<p>Let us watch your kids this winter! We have themed camps and all kinds of stuff for your little brats to do!</p>
+								</div>
+							</div>	
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<img src="http://westlothiangymnastics.co.uk/wp-content/uploads/2014/05/slide0041.jpg" class="img-responsive" id="ti" alt="...">
+								<div class="caption">
+									<h3 id="tttest">Kids Night Out</h3>
+									<p>Let us watch your kids this winter! We have themed camps and all kinds of stuff for your little brats to do!</p>
+								</div>
+							</div>	
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<img src="http://www.dcgymnastics.net/images/pics/scroller/index7a.JPG" class="img-responsive" id="ti" alt="...">
+								<div class="caption">
+									<h3 id="tttest">Gymnastics</h3>
+									<p>Let us watch your kids this winter! We have themed camps and all kinds of stuff for your little brats to do!</p>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+				
+                    <!--About
+		================================================== -->
+			   <div class="container-fluid" ng-show="panel.isSelected(2)">
+			   		<div class="row">
+			   			<div class="col-md-6" id="story">
+							<h1>Our Story</h1>
+			   				<p>
+							This is where you will tell the story of your business and how the business has evolved over time to 
+							be something great. 
+							</p>
+			   			</div>
+						<div class="col-md-6" id="story">
+							<h1>Our Mission</h1>
+			   				<p>
+							This is where you will tell the mission of your business and how your mission is right for the child
+							that wants to attend this gym program and blah blah blah.
+							</p>
+			   			</div>
+			   		</div>
+					<div class="row">
+						<div class="col-md-12">
+							<h1>About The Owner</h1>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-9" id="me">
+							<p>Chelsea is a program developer; creating curriculum, consulting and leading training sessions for children’s facilities throughout the country. Gymnastics has always been a large part of her life. She was introduced to the sport at two years old and continued up through competitive gymnastics till she began coaching at seventeen. Teaching in this industry for over a decade now, she has established herself by creating solid gymnastics curriculum, establishing and improving multiple children’s programs, organizing large events and developing training workshops. Chelsea remains a leader in the gymnastics community and continues to further herself by attending national and local gymnastics conferences. She loves what she does and can’t wait to share her passion with others!
+							</p>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail" id="aboutImg">
+								<img src="\images\chelsea.jpg" class="pull-right">
+							</div>
+						</div>
+					</div>	
+			   </div>
+			   
+					<!--Curriculum
+		================================================== -->
+		
+				<div class="container-fluid" ng-show="panel.isSelected(3)">
+			   		<div class="row">
+			   			<!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+							<input type="hidden" name="cmd" value="_s-xclick">
+								<table>
+									<tr><td><input type="hidden" name="on0" value="Number of Lessor Plans">Number of Lessor Plans</td></tr><tr><td><select name="os0">
+										<option value="30 Lessons">30 Lessons $240.00 USD</option>
+										<option value="60 Lessons">60 Lessons $480.00 USD</option>
+										<option value="90 Lessons">90 Lessons $720.00 USD</option>
+										</select> </td></tr>
+									</table>
+							<input type="hidden" name="currency_code" value="USD">
+							<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+								">
+							<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+							<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+						</form>
+-->
+					</div>	
+			   </div>
+			
+					<!--Calendar
+		================================================== -->
+		
+				<div class="container-fluid" ng-show="panel.isSelected(4)">
+					<iframe src="https://calendar.google.com/calendar/embed?showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=chelsea%40keystonegymnastics.com&amp;color=%2329527A&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FChicago" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+				</div>
+			
+			
+					<!--Contact
+		================================================== -->
+		<form action="https://formspree.io/cmlinton88@gmail.com" method="post" ng-show="panel.isSelected(5)">
+				  <div class="form-group">
+					<label for="exampleInputName1">Name</label>
+					<input type="text" name="name" class="form-control" id="exampleInputName1" placeholder="Name">
+				  </div>
+				  <div class="form-group">
+					<label for="exampleInputEmail1">Email address</label>
+					<input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+				  </div>
+				  <div class="form-group">
+					<label for="exampleInputNumber1">Phone Number</label>
+					<input type="tel" name="phone" class="form-control" id="exampleInputNumber1" placeholder="555-555-5555">
+				  </div>
+				  <div class="form-group">
+					<label for="exampleInputSubject">Subject</label>
+					<input type="text" name="subject" class="form-control" id="exampleInputSubject" placeholder="Subject">
+				  </div>
+				  <div class="form-group">
+					<label for="exampleInputComment">Message</label>
+					<textarea type="text" name="message" class="form-control" id="exampleInputComment" placeholder="Enter text here..."></textarea>
+				  </div>
+				  <button name="submit" onclick="objMsg();clearForm();" class="btn btn-default">Submit</button>
+				</form>
+
+		
+		
+		
+					<!--Footer
+		================================================== -->
+		
+		
+				<div class="container-fluid" id="footer">
+					<div class="row" id="theTest">
+						<div class="col-md-6" id="footCont">
+							<p class="center-block" id="foot" align="center">Keystone Gymnastics<br>
+								559.375.5353<br>
+								chelsea@keystonegymnastics.com<br>
+								<a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/keystonegymnastics" target="_blank">
+									<span class="fa fa-facebook"></span>
+								</a>
+							</p>
+						</div>
+						<div class="col-md-6">
+							<img src="keylogo.png" class="img-responsive" id="footlogo" align="middle">
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"> </script>
+	<script type="text/javascript" src="ui.js"> </script>
+	    <script
+  src="http://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- Placed at the end of the document so the pages load faster -->
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Luckiest+Guy" rel="stylesheet">
+	</body>
+
+
+</html>
+	
