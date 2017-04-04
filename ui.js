@@ -9,7 +9,7 @@ else
     document.getElementById('foot').style.height=right;
 }
 
-var construction = alert('This page is under construction. Please excuse our mess!');
+//var construction = alert('This page is under construction. Please excuse our mess!');
 
 function objMsg() {
 	var theMsg = {name: document.getElementById('name').value

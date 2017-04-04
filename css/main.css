@@ -12,6 +12,10 @@ background-color:rgb(120,120,120);
 color:white;
 }
 
+#navbarDropdownMenuLink {
+	color:white;
+}
+
 .tb  {
 	max-width:300px;
 	max-height:185px;
@@ -48,11 +52,13 @@ color:white;
 	color:#ffffff;
 	font-family: 'Luckiest Guy', cursive;
 	text-shadow: 2px 2px black;
+	margin-top:15px;
+	margin-bottom: 10px;
 }
 
 #myBack {
 	background-color: #05386b; /*#337ab7;*/
-	background-image: url("11.png");
+	background-image: url("/images/backImage.png");
 	background-position: top right;
 	background-size:15%;
 	background-repeat: no-repeat;
@@ -68,17 +74,15 @@ color:white;
 	border-color: black;
 }
 
-#news {
-	max-width: 100%;
-	border:solid;
-	border-color: black;
-	border-radius: 15px;
+#topRow {
+	padding-top:3px;
 }
 
 .thumbnail {
 	background:transparent;	
 	border:none;
-	position:relative;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 #ti {
@@ -87,8 +91,10 @@ color:white;
 	max-height:200px;
 	min-height:170px; */
 	height:170px;
+	position:relative;
 	width:280px;
 	overflow:hidden;
+	margin-left: 5%;
 }
 
 #tttest {
@@ -99,22 +105,29 @@ color:white;
 	padding-top: 25px;
 }
 
+#abouttab {
+	padding-top:15px;
+}
+
 #mission {
 	padding-bottom: 25px;
 }
 
 #foot {
+
+	height:200px;
+    padding-top:43px;
+} 
+
+#footCont {
 	border-right:solid;
 	border-color:black;
 	border-width:1px;
-	height:200px;
-        padding-top:43px;
-} 
+	margin-bottom:1rem;
+}
 
 #footlogo {
 	height: 200px;
-	width: auto;
-	margin: 0 auto;
 }
 
 #story {
@@ -137,6 +150,10 @@ textarea {
 	min-height:200px;
 }
 
-.carousel-inner > .item > img {
+.carousel-inner > .carousel-item > img {
     margin: 0 auto;
+}
+
+#curriculum {
+	display: none;
 }

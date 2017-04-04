@@ -3,11 +3,11 @@
 	<head>
 	<meta charset="utf-8">
 <script type="text/javascript">
-  if (screen.width <= 800) {
+  if (screen.width <= 500) {
     window.location = "http://m.keystonegymnastics.com";
   }
 </script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<link rel="stylesheet" href="\css\bootstrap-social.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="\css\main.css">
@@ -15,24 +15,39 @@
 	
 	<body id="myBack">
 		<section ng-controller="PanelController as panel">
-			<nav>
-				<ul class="nav nav-pills" id="navi">
-					<li ng-class="{ active:panel.isSelected(1) }" id="pills">
-						<a href ng-click="panel.selectTab(1)">Home</a>
-					</li>
-	  				<li ng-class="{ active:panel.isSelected(2) }">
-	  					<a href ng-click="panel.selectTab(2)">About</a>
-	  				</li>
-	  				<li ng-class="{ active:panel.isSelected(3) }">
-	  					<a href ng-click="panel.selectTab(3)">Curriculum</a>
-	  				</li> 
-	  				<li ng-class="{ active:panel.isSelected(4) }">
-	  					<a href ng-click="panel.selectTab(4)">Calendar</a>
-	  				</li>
-					<li ng-class="{ active:panel.isSelected(5) }">
-	  					<a href ng-click="panel.selectTab(5)">Contact</a>
-	  				</li>
-					<li class="pull-right" id="social">
+			<nav class="navbar navbar-toggleable-md navbar-light" id="navi">
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				   	<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="nav nav-pills">
+						<li class="nav-item active" ng-class="{ active:panel.isSelected(1) }" id="pills">
+							<a class="nav-link" href ng-click="panel.selectTab(1)">Home</a>
+						</li>
+		  				<li class="nav-item" ng-class="{ active:panel.isSelected(2) }">
+		  					<a class="nav-link" href ng-click="panel.selectTab(2)">About</a>
+		  				</li>
+		  				<li class="nav-item dropdown">
+		  					<a class="nav-link	" type="button" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Programs</a>
+		  					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					          	<a class="dropdown-item" href="#">Action</a>
+					          	<a class="dropdown-item" href="#">Another action</a>
+					          	<a class="dropdown-item" href="#">Something else here</a>
+					        </div>
+		  				</li>
+		  				<li class="nav-item" ng-class="{ active:panel.isSelected(4) }" id="curriculum">
+		  					<a class="nav-link" href ng-click="panel.selectTab(4)">Curriculum</a>
+		  				</li> 
+		  				<li class="nav-item" ng-class="{ active:panel.isSelected(5) }">
+		  					<a class="nav-link" href ng-click="panel.selectTab(5)">Calendar</a>
+		  				</li>
+						<li class="nav-item" ng-class="{ active:panel.isSelected(6) }">
+		  					<a class="nav-link" href ng-click="panel.selectTab(6)">Contact</a>
+		  				</li>
+		  			</ul>
+		  		</div>
+	  			<ul class="nav navbar-nav navbar-right">
+					<li id="social">
 						<a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/keystonegymnastics" target="_blank">
 							<span class="fa fa-facebook"></span>
 						</a>
@@ -42,8 +57,8 @@
 
 			<div class="container-fluid" id="con">		
 				<div class="row">
-					<div class="col-md-9" id="title">
-						<h1>Keystone Gymnastics</h1>
+					<div class="col-md-12">
+						<h1 id="title">Keystone Gymnastics</h1>
 					</div>
 				</div>
 
@@ -55,31 +70,31 @@
 				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
 				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
 				  </ol>
 
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
-				    <div class="item active">
-				      <img src="\images\Slide1.jpg" alt="" id="i1">
+				    <div class="carousel-item active">
+				      <img class="d-block img-fluid" src="\images\Slide1.jpg" alt="" id="i1">
 				      <div class="carousel-caption">
 				        ...
 				      </div>
 				    </div>
-				    <div class="item">
-				      <img src="\images\Slide2.jpg" alt="" id="i2">
+				    <div class="carousel-item">
+				      <img class="d-block img-fluid" src="\images\Slide2.jpg" alt="" id="i2">
 				      <div class="carousel-caption">
 				        ...
 				      </div>
 				    </div>
-				    <div class="item">
-				      <img src="\images\Slide3.jpg" alt="">
+				    <div class="carousel-item">
+				      <img class="d-block img-fluid" src="\images\Slide3.jpg" alt="">
 				      <div class="carousel-caption">
 				        ...
 				      </div>
-                                    </div>
-                                    <div class="item">
-				      <img src="\images\Slide4.jpg" alt="">
+                    </div>
+                    <div class="carousel-item">
+				      <img class="d-block img-fluid" src="\images\Slide4.jpg" alt="">
 				      <div class="carousel-caption">
 				        ...
 				      </div>
@@ -88,81 +103,52 @@
 				  </div>
 
 				  <!-- Controls -->
-				  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				  <a class="carousel-control-prev" href="#carousel-example-generic" role="button" data-slide="prev">
+				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				    <span class="sr-only">Previous</span>
 				  </a>
-				  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				  <a class="carousel-control-next" href="#carousel-example-generic" role="button" data-slide="next">
+				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
 				    <span class="sr-only">Next</span>
 				  </a>
 				</div>
 
 				<div class="container-fluid" id="thmb" ng-show="panel.isSelected(1)">
-					<div class="row">
-						<div class="col-lg-12" id="mission">
-							<h1>Welcome to Keystone Gymnastics!</h1>
-							<p>
-								Here at Keystone Gymnastics we build strong, happy, kids! We offer recreational gymnastic classes for kids from ages 2 to 12. 
-								This is where you can enter more text about what you offer. and what keystone gymnastics is all about.
-							</p>
-						</div>
-					</div>
-					<div class="row">
+					<h1>Welcome to Keystone Gymnastics</h1>
+					<p>
+					Here at Keystone Gymnastics we work hard to build strong and happy kids.  We offer a variety of programs including mobile gymnastics classes, playgroups, parties, special presentations and camps.  Our students gain memorable experiences and self-esteem as they achieve an “I can do it!” attitude.
+					</p>
+					<div class="row" id="topRow">
 						<div class="col-sm-6 col-md-4">
 							<div class="thumbnail">
-								<img src="http://www.dcgymnastics.net/images/pics/scroller/index7a.JPG" class="img-responsive" id="ti" alt="...">
-								<div class="caption">
-									<h3 id="tttest">Curriculum/Products</h3>
-									<p>Let us watch your kids this winter! We have themed camps and all kinds of stuff for your little brats to do!</p>
-								</div>
+								<img src="\images\curriculum.jpg" class="img-responsive" id="ti" alt="...">
 							</div>	
 						</div>
 						<div class="col-sm-6 col-md-4">
 							<div class="thumbnail">
-								<img src="http://westlothiangymnastics.co.uk/wp-content/uploads/2014/05/slide0041.jpg" class="img-responsive" id="ti" alt="...">
-								<div class="caption">
-									<h3 id="tttest">Tumble Truck</h3>
-									<p>Let us watch your kids this winter! We have themed camps and all kinds of stuff for your little brats to do!</p>
-								</div>
+								<img src="\images\curriculum.jpg" class="img-responsive" id="ti" alt="...">
 							</div>	
 						</div>
 						<div class="col-sm-6 col-md-4">
 							<div class="thumbnail">
-								<img src="http://www.dcgymnastics.net/images/pics/scroller/index7a.JPG" class="img-responsive" id="ti" alt="...">
-								<div class="caption">
-									<h3 id="tttest">Parties</h3>
-									<p>Let us watch your kids this winter! We have themed camps and all kinds of stuff for your little brats to do!</p>
-								</div>
+								<img src="\images\curriculum.jpg" class="img-responsive" id="ti" alt="...">
 							</div>	
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-6 col-md-4">
 							<div class="thumbnail">
-								<img src="http://www.dcgymnastics.net/images/pics/scroller/index7a.JPG" class="img-responsive" id="ti" alt="...">
-								<div class="caption">
-									<h3 id="tttest">Camps</h3>
-									<p>Let us watch your kids this winter! We have themed camps and all kinds of stuff for your little brats to do!</p>
-								</div>
+								<img src="\images\curriculum.jpg" class="img-responsive" id="ti" alt="...">
 							</div>	
 						</div>
 						<div class="col-sm-6 col-md-4">
 							<div class="thumbnail">
-								<img src="http://westlothiangymnastics.co.uk/wp-content/uploads/2014/05/slide0041.jpg" class="img-responsive" id="ti" alt="...">
-								<div class="caption">
-									<h3 id="tttest">Kids Night Out</h3>
-									<p>Let us watch your kids this winter! We have themed camps and all kinds of stuff for your little brats to do!</p>
-								</div>
+								<img src="\images\curriculum.jpg" class="img-responsive" id="ti" alt="...">
 							</div>	
 						</div>
 						<div class="col-sm-6 col-md-4">
 							<div class="thumbnail">
-								<img src="http://www.dcgymnastics.net/images/pics/scroller/index7a.JPG" class="img-responsive" id="ti" alt="...">
-								<div class="caption">
-									<h3 id="tttest">Gymnastics</h3>
-									<p>Let us watch your kids this winter! We have themed camps and all kinds of stuff for your little brats to do!</p>
-								</div>
+								<img src="\images\curriculum.jpg" class="img-responsive" id="ti" alt="...">
 							</div>	
 						</div>
 					</div>
@@ -171,19 +157,17 @@
                     <!--About
 		================================================== -->
 			   <div class="container-fluid" ng-show="panel.isSelected(2)">
-			   		<div class="row">
+			   		<div class="row" id="abouttab">
 			   			<div class="col-md-6" id="story">
 							<h1>Our Story</h1>
 			   				<p>
-							This is where you will tell the story of your business and how the business has evolved over time to 
-							be something great. 
+							Keystone Gymnastics is a small family business owned and operated out of Hailey, Idaho since 2017.  Even though we are new to the area, we are not new to this industry.  Keystone Gymnastics, specifically the Tumble Truck, is known for loading up our equipment and “bringing the fun” to surrounding areas.  The curriculum we use for our mobile gymnastics program was created by the owner over the years and has been proven successful; even being taught in other states.  Children and their parents seem to love the benefits our programs have to offer!.  We look forward to growing within the community and truly becoming a part of every family in beautiful Sun Valley. 
 							</p>
 			   			</div>
 						<div class="col-md-6" id="story">
 							<h1>Our Mission</h1>
 			   				<p>
-							This is where you will tell the mission of your business and how your mission is right for the child
-							that wants to attend this gym program and blah blah blah.
+							Our mission is to help build strong and happy kids.  Our name, Keystone Gymnastics, comes from the construction term “keystone.”  It is the stone in the very center of an arch that holds everything together.  This is what we want our program to be; the foundation that every child should have and can build upon  in order to establish great confidence, high self esteem, an active and healthy lifestyle, balance, fun, flexibility and of course awesome gymnastics skills!  We understand how busy life can get, so In order to achieve this goal we bring our equipment to the kids.  We want to make our programs easily available and accessible to all the families in our area.
 							</p>
 			   			</div>
 			   		</div>
@@ -193,13 +177,13 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-9" id="me">
+						<div class="col-sm-6 col-md-8" id="me">
 							<p>Chelsea is a program developer; creating curriculum, consulting and leading training sessions for children’s facilities throughout the country. Gymnastics has always been a large part of her life. She was introduced to the sport at two years old and continued up through competitive gymnastics till she began coaching at seventeen. Teaching in this industry for over a decade now, she has established herself by creating solid gymnastics curriculum, establishing and improving multiple children’s programs, organizing large events and developing training workshops. Chelsea remains a leader in the gymnastics community and continues to further herself by attending national and local gymnastics conferences. She loves what she does and can’t wait to share her passion with others!
 							</p>
 						</div>
-						<div class="col-sm-6 col-md-3">
+						<div class="col-sm-6 col-md-4">
 							<div class="thumbnail" id="aboutImg">
-								<img src="\images\chelsea.jpg" class="pull-right">
+								<img src="\images\chelsea.jpg" class="img-responsive">
 							</div>
 						</div>
 					</div>	
@@ -208,7 +192,7 @@
 					<!--Curriculum
 		================================================== -->
 		
-				<div class="container-fluid" ng-show="panel.isSelected(3)">
+				<div class="container-fluid" ng-show="panel.isSelected(4)">
 			   		<div class="row">
 			   			<!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 							<input type="hidden" name="cmd" value="_s-xclick">
@@ -232,14 +216,14 @@
 					<!--Calendar
 		================================================== -->
 		
-				<div class="container-fluid" ng-show="panel.isSelected(4)">
+				<div class="container-fluid" ng-show="panel.isSelected(5)">
 					<iframe src="https://calendar.google.com/calendar/embed?showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=chelsea%40keystonegymnastics.com&amp;color=%2329527A&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FChicago" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 				</div>
 			
 			
 					<!--Contact
 		================================================== -->
-		<form action="https://formspree.io/cmlinton88@gmail.com" method="post" ng-show="panel.isSelected(5)">
+		<form action="https://formspree.io/cmlinton88@gmail.com" method="post" ng-show="panel.isSelected(6)">
 				  <div class="form-group">
 					<label for="exampleInputName1">Name</label>
 					<input type="text" name="name" class="form-control" id="exampleInputName1" placeholder="Name">
@@ -282,7 +266,7 @@
 							</p>
 						</div>
 						<div class="col-md-6">
-							<img src="keylogo.png" class="img-responsive" id="footlogo" align="middle">
+							<img src="keylogo.png" class="rounded mx-auto d-block" id="footlogo">
 						</div>
 					</div>
 				</div>
@@ -294,11 +278,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	<script type="text/javascript" src="app.js"> </script>
 	<script type="text/javascript" src="ui.js"> </script>
-	    <script
-  src="http://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 	<!-- Placed at the end of the document so the pages load faster -->
     <link href="https://fonts.googleapis.com/css?family=Chewy|Luckiest+Guy" rel="stylesheet">
 	</body>
