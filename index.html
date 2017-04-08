@@ -3,9 +3,9 @@
 	<head>
 	<meta charset="utf-8">
 <script type="text/javascript">
-  if (screen.width <= 500) {
+  /*if (screen.width <= 500) {
     window.location = "http://m.keystonegymnastics.com";
-  }
+  }*/
 </script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<link rel="stylesheet" href="\css\bootstrap-social.css">
@@ -27,22 +27,25 @@
 		  				<li class="nav-item" ng-class="{ active:panel.isSelected(2) }">
 		  					<a class="nav-link" href ng-click="panel.selectTab(2)">About</a>
 		  				</li>
-		  				<li class="nav-item dropdown">
+		  				<li class="nav-item dropdown" ng-class="{ active:panel.isSelected(3) }">
 		  					<a class="nav-link	" type="button" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Programs</a>
 		  					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-					          	<a class="dropdown-item" href="#">Action</a>
-					          	<a class="dropdown-item" href="#">Another action</a>
-					          	<a class="dropdown-item" href="#">Something else here</a>
+					          	<a class="dropdown-item" href ng-click="panel.selectTab(3)">Curriculum</a>
+					          	<a class="dropdown-item" href ng-click="panel.selectTab(4)">Tumble Truck</a>
+					          	<a class="dropdown-item" href ng-click="panel.selectTab(5)">Birthday Parties</a>
+					          	<a class="dropdown-item" href ng-click="panel.selectTab(6)">Special Presentations</a>
+					          	<a class="dropdown-item" href ng-click="panel.selectTab(7)">Playgroups</a>
+					          	<a class="dropdown-item" href ng-click="panel.selectTab(8)">Day Camp</a>
 					        </div>
 		  				</li>
-		  				<li class="nav-item" ng-class="{ active:panel.isSelected(4) }" id="curriculum">
-		  					<a class="nav-link" href ng-click="panel.selectTab(4)">Curriculum</a>
+		  				<li class="nav-item" ng-class="{ active:panel.isSelected(9) }" id="curriculum">
+		  					<a class="nav-link" href ng-click="panel.selectTab(9)">Curriculum</a>
 		  				</li> 
-		  				<li class="nav-item" ng-class="{ active:panel.isSelected(5) }">
-		  					<a class="nav-link" href ng-click="panel.selectTab(5)">Calendar</a>
+		  				<li class="nav-item" ng-class="{ active:panel.isSelected(10) }">
+		  					<a class="nav-link" href ng-click="panel.selectTab(10)">Calendar</a>
 		  				</li>
-						<li class="nav-item" ng-class="{ active:panel.isSelected(6) }">
-		  					<a class="nav-link" href ng-click="panel.selectTab(6)">Contact</a>
+						<li class="nav-item" ng-class="{ active:panel.isSelected(11) }">
+		  					<a class="nav-link" href ng-click="panel.selectTab(11)">Contact</a>
 		  				</li>
 		  			</ul>
 		  		</div>
@@ -120,35 +123,53 @@
 					</p>
 					<div class="row" id="topRow">
 						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="\images\curriculum.jpg" class="img-responsive" id="ti" alt="...">
+							<div class="thumbnail" style="cursor:pointer">
+								<img src="\images\curriculum.jpg" class="img-responsive" id="ti" alt="..." usemap="#curriculumImg">
+								<map name="curriculumImg">
+									<area shape="rect" coords="0,0,280,170" ng-click="panel.selectTab(3)">
+								</map>
 							</div>	
 						</div>
 						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="\images\curriculum.jpg" class="img-responsive" id="ti" alt="...">
+							<div class="thumbnail" style="cursor:pointer">
+								<img src="\images\TumbleTruck.jpg" class="img-responsive" id="ti" alt="..." usemap="#TumbleTruck">
+								<map name="TumbleTruck">
+									<area shape="rect" coords="0,0,280,170" ng-click="panel.selectTab(4)">
+								</map>
 							</div>	
 						</div>
 						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="\images\curriculum.jpg" class="img-responsive" id="ti" alt="...">
+							<div class="thumbnail" style="cursor:pointer">
+								<img src="\images\BirthdayParties.jpg" class="img-responsive" id="ti" alt="..." usemap="#Birthday">
+								<map name="Birthday">
+									<area shape="rect" coords="0,0,280,170" ng-click="panel.selectTab(5)">
+								</map>
 							</div>	
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="\images\curriculum.jpg" class="img-responsive" id="ti" alt="...">
+							<div class="thumbnail" style="cursor:pointer">
+								<img src="\images\SpecialPresent.jpg" class="img-responsive" id="ti" alt="..." usemap="#Special">
+								<map name="Special">
+									<area shape="rect" coords="0,0,280,170" ng-click="panel.selectTab(6)">
+								</map>
 							</div>	
 						</div>
 						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="\images\curriculum.jpg" class="img-responsive" id="ti" alt="...">
+							<div class="thumbnail" style="cursor:pointer">
+								<img src="\images\Playgroup.jpg" class="img-responsive" id="ti" alt="..." usemap="#Play">
+								<map name="Play">
+									<area shape="rect" coords="0,0,280,170" ng-click="panel.selectTab(7)">
+								</map>
 							</div>	
 						</div>
 						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="\images\curriculum.jpg" class="img-responsive" id="ti" alt="...">
+							<div class="thumbnail" style="cursor:pointer">
+								<img src="\images\DayCamp.jpg" class="img-responsive" id="ti" alt="..." usemap="#DayCamp">
+								<map name="DayCamp">
+									<area shape="rect" coords="0,0,280,170" ng-click="panel.selectTab(8)">
+								</map>
 							</div>	
 						</div>
 					</div>
@@ -161,13 +182,13 @@
 			   			<div class="col-md-6" id="story">
 							<h1>Our Story</h1>
 			   				<p>
-							Keystone Gymnastics is a small family business owned and operated out of Hailey, Idaho since 2017.  Even though we are new to the area, we are not new to this industry.  Keystone Gymnastics, specifically the Tumble Truck, is known for loading up our equipment and “bringing the fun” to surrounding areas.  The curriculum we use for our mobile gymnastics program was created by the owner over the years and has been proven successful; even being taught in other states.  Children and their parents seem to love the benefits our programs have to offer!.  We look forward to growing within the community and truly becoming a part of every family in beautiful Sun Valley. 
+							Keystone Gymnastics is a small family business owned and operated out of Hailey, Idaho since 2017.  Even though we are new to the area, we are not new to this industry.  Keystone Gymnastics, specifically the Tumble Truck, is known for loading up our equipment and “bringing the fun” to surrounding areas.  The curriculum we use for our mobile gymnastics program was created by the owner over the years and has been proven successful; even being taught in other states.  Children and their parents seem to love the benefits our programs have to offer!  We look forward to growing within the community and truly becoming a part of every family in beautiful Sun Valley. 
 							</p>
 			   			</div>
 						<div class="col-md-6" id="story">
 							<h1>Our Mission</h1>
 			   				<p>
-							Our mission is to help build strong and happy kids.  Our name, Keystone Gymnastics, comes from the construction term “keystone.”  It is the stone in the very center of an arch that holds everything together.  This is what we want our program to be; the foundation that every child should have and can build upon  in order to establish great confidence, high self esteem, an active and healthy lifestyle, balance, fun, flexibility and of course awesome gymnastics skills!  We understand how busy life can get, so In order to achieve this goal we bring our equipment to the kids.  We want to make our programs easily available and accessible to all the families in our area.
+							Our mission is to help build strong and happy kids.  Our name, Keystone Gymnastics, comes from the construction term “keystone.”  It is the stone in the very center of an arch that holds everything together.  This is what we want our program to be; the foundation that every child should have and can build upon  in order to establish great confidence, high self esteem, an active and healthy lifestyle, balance, fun, flexibility and of course awesome gymnastics skills!  We understand how busy life can get, so in order to achieve this goal we bring our equipment to the kids.  We want to make our programs easily available and accessible to all the families in our area.
 							</p>
 			   			</div>
 			   		</div>
@@ -188,11 +209,124 @@
 						</div>
 					</div>	
 			   </div>
+
+
+			   <!--Programs
+		================================================= -->
+				<!--Curriculum-->
+				<div class="container-fluid" ng-show="panel.isSelected(3)">
+					<div class="row" id="comingsoon">
+						<div class="container-fluid">
+							<h2 class="text-center">Curriculum will be available for purchase soon!</h2>
+						</div>
+					</div>
+				</div>
+
+				<!--Tumble Truck-->
+				<div class="container-fluid" ng-show="panel.isSelected(4)" ng-controller="StoreController as store">
+					<div class="row">
+						<h2 id="ttruck">Tumble Truck</h2>
+					</div>
+					<div class="row">
+						<div class="container-fluid">
+							<h4 class="text-center">What is Tumble Truck?</h4>
+						</div>
+					</div>
+					<div class="row">
+							<p>
+								The Tumble Truck is a mobile gymnastics program provided by Keystone Gymnastics – bringing physical and educational benefits to children at daycares, preschools and grade schools. Our instructors provide a successful program of Olympic style gymnastics curriculum in a safe, positive and fun atmosphere! Children gain memorable experiences and self-esteem as they achieve an “I can do it!” attitude.
+							</p>
+					</div>
+					<div class="container" ng-repeat="program in store.programs">
+						<div class="row" id="programClasses">
+							<div class="col-md-6">
+								<h5><strong>{{ program.name }}</strong></h5>
+							</div>
+							<div class="col-md-2">
+								<h6>{{ program.age }}</h6>
+							</div>
+							<div class="col-md-2">
+							<h6>{{ program.duration }}</h6>
+							</div>
+							<div class="col-md-2">
+								<h6>{{ program.ratio }}</h6>
+							</div>
+						</div>
+						<div class="row">
+							<p>{{ program.description }}</p>
+						</div>
+					</div>
+				</div>
+
+				<!--bdays-->
+				<div class="container-fluid" ng-show="panel.isSelected(5)">
+					<div class="row">
+						<img src="\images\bdayTab.png" class="img-responsive">
+						<img src="\images\bdayTab2.png" class="img-responsive">
+					</div>
+				</div>
+
+				<!--special presentations-->
+				<div class="container-fluid" ng-show="panel.isSelected(6)" ng-controller="StoreController as store">
+					<div class="container-fluid">
+						<div class="row" id="specialprog">
+							<div class="col-md-6">
+									<h5><strong>{{ store.programs[5].name }}</strong></h5>
+							</div>
+							<div class="col-md-2">
+								<h6>{{ store.programs[5].age }}</h6>
+							</div>
+							<div class="col-md-2">
+							<h6>{{ store.programs[5].duration }}</h6>
+							</div>
+							<div class="col-md-2">
+								<h6>{{ store.programs[5].ratio }}</h6>
+							</div>
+						</div>
+						<div class="row">
+							<p>{{ store.programs[5].description }}</p>
+						</div>
+					</div>
+				</div>
+
+				<!--playgroups-->
+				<div class="container-fluid" ng-show="panel.isSelected(7)" ng-controller="StoreController as store">
+					<div class="container-fluid">
+						<div class="row" id="specialprog">
+							<div class="col-md-6">
+									<h5><strong>{{ store.programs[4].name }}</strong></h5>
+							</div>
+							<div class="col-md-2">
+								<h6>{{ store.programs[4].age }}</h6>
+							</div>
+							<div class="col-md-2">
+							<h6>{{ store.programs[4].duration }}</h6>
+							</div>
+							<div class="col-md-2">
+								<h6>{{ store.programs[4].ratio }}</h6>
+							</div>
+						</div>
+						<div class="row">
+							<p>{{ store.programs[4].description }}</p>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="container-fluid" ng-show="panel.isSelected(8)">
+					<div class="row" id="comingsoon">
+						<div class="container-fluid">
+							<h2 class="text-center">Information for day camp is not available at this time</h2>
+						</div>
+					</div>
+				</div>
+
+
 			   
 					<!--Curriculum
 		================================================== -->
 		
-				<div class="container-fluid" ng-show="panel.isSelected(4)">
+				<div class="container-fluid" ng-show="panel.isSelected(9)">
 			   		<div class="row">
 			   			<!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 							<input type="hidden" name="cmd" value="_s-xclick">
@@ -216,14 +350,14 @@
 					<!--Calendar
 		================================================== -->
 		
-				<div class="container-fluid" ng-show="panel.isSelected(5)">
+				<div class="container-fluid" ng-show="panel.isSelected(10)">
 					<iframe src="https://calendar.google.com/calendar/embed?showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=chelsea%40keystonegymnastics.com&amp;color=%2329527A&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FChicago" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 				</div>
 			
 			
 					<!--Contact
 		================================================== -->
-		<form action="https://formspree.io/cmlinton88@gmail.com" method="post" ng-show="panel.isSelected(6)">
+		<form action="https://formspree.io/keystonegymnastics@gmail.com" method="post" ng-show="panel.isSelected(11)">
 				  <div class="form-group">
 					<label for="exampleInputName1">Name</label>
 					<input type="text" name="name" class="form-control" id="exampleInputName1" placeholder="Name">
@@ -257,7 +391,7 @@
 				<div class="container-fluid" id="footer">
 					<div class="row" id="theTest">
 						<div class="col-md-6" id="footCont">
-							<p class="center-block" id="foot" align="center">Keystone Gymnastics<br>
+							<p class="center-block" id="foot" align="center"><strong>Keystone Gymnastics</strong><br>
 								559.375.5353<br>
 								chelsea@keystonegymnastics.com<br>
 								<a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/keystonegymnastics" target="_blank">
@@ -266,7 +400,7 @@
 							</p>
 						</div>
 						<div class="col-md-6">
-							<img src="keylogo.png" class="rounded mx-auto d-block" id="footlogo">
+							<img src="images\keylogo.png" class="rounded mx-auto d-block" id="footlogo">
 						</div>
 					</div>
 				</div>
@@ -276,8 +410,8 @@
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-	<script type="text/javascript" src="app.js"> </script>
-	<script type="text/javascript" src="ui.js"> </script>
+	<script type="text/javascript" src="js\app.js"> </script>
+	<script type="text/javascript" src="js\ui.js"> </script>
 	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
